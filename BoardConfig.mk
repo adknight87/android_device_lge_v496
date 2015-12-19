@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+LOCAL_PATH	:= device/lge/v496
 # inherit from the proprietary version
 -include vendor/lge/v496/BoardConfigVendor.mk
 
