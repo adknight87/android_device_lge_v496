@@ -13,9 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 # inherit from the proprietary version
 -include vendor/lge/v496/BoardConfigVendor.mk
+
+LOCAL_PATH := device/lge/v496
 
 TARGET_OTA_ASSERT_DEVICE := v496,t8,t8lte
 

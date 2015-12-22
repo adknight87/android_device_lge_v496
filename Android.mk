@@ -22,16 +22,16 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
-define vfatfilename
-$(foreach f,$(1),$(shell echo $(f) | \
-    awk 'BEGIN { FS="."; } { printf("%s.%s", substr($$1,1,8), $$2); }'))
-endef
-
-# Create a link for the WCNSS config file, which ends up as a writable
-# version in /data/misc/wifi
-$(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
-    ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
-        $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
-
+# define vfatfilename
+# $(foreach f,$(1),$(shell echo $(f) | \
+#     awk 'BEGIN { FS="."; } { printf("%s.%s", substr($$1,1,8), $$2); }'))
+# endef
+# 
+# # Create a link for the WCNSS config file, which ends up as a writable
+# # version in /data/misc/wifi
+# $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
+#     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
+#         $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+# 
 endif
 
